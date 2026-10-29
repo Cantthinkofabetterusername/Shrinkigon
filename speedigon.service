@@ -1,0 +1,15 @@
+[Unit]
+Description=Speedigon optimization server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/speedigon_src/build_aws
+Environment=SPEEDIGON_AUTH_URL=https://9gf669pum9.execute-api.us-east-2.amazonaws.com
+ExecStart=/home/ubuntu/speedigon_src/build_aws/speedigon_server
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
