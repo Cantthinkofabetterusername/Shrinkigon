@@ -939,7 +939,7 @@ int optimizationElapsedSeconds() {
     );
 }
 
-constexpr unsigned int kLocalTriangleLimit = 50000;
+constexpr unsigned int kLocalTriangleLimit = 100000;
 
 unsigned int countLoadedTriangles() {
     unsigned int total = 0;
